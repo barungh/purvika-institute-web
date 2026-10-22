@@ -1,59 +1,23 @@
-# Purvikainstitute
+# Purvika Institute of Learning — website
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.10.
+Single-page static site for Purvika Institute of Learning, Siliguri. No build step.
 
-## Development server
-
-To start a local development server, run:
-
-```bash
-ng serve
+```
+public/
+  index.html          the whole page (CSS and JS inline)
+  img/                classroom photos
+  purvika-*.svg|png   logo, dark logo, app icon
+  og-image.png        1200×630 share preview (WhatsApp, Facebook)
+  robots.txt, sitemap.xml
+vercel.json           static hosting config (framework: none, output: public)
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Update the site
 
-## Code scaffolding
+1. Edit `public/index.html` (fees, courses, contact are plain HTML sections).
+2. Commit and push to `main`. Vercel deploys automatically.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## When a custom domain is added
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Replace the site address in `public/index.html` (canonical, og:url, og:image, JSON-LD),
+`public/robots.txt` and `public/sitemap.xml`, then submit the sitemap in Google Search Console.
